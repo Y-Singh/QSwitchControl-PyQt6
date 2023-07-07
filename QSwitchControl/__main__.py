@@ -23,8 +23,8 @@ SOFTWARE.
 """
 import sys
 
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout
+from PyQt6.QtCore import Qt
+from PyQt6.QtWidgets import QApplication, QWidget, QHBoxLayout
 
 from QSwitchControl import SwitchControl
 
@@ -42,7 +42,7 @@ class Form(QWidget):
 		""")
 		switch_control = SwitchControl()
 		h_box = QHBoxLayout()
-		h_box.addWidget(switch_control, Qt.AlignCenter, Qt.AlignCenter)
+		h_box.addWidget(switch_control, Qt.AlignmentFlag.AlignCenter, Qt.AlignmentFlag.AlignCenter)
 		self.setLayout(h_box)
 		self.show()
 
@@ -50,4 +50,4 @@ class Form(QWidget):
 app = QApplication(sys.argv)
 form = Form()
 if __name__ == '__main__':
-	sys.exit(app.exec_())
+	sys.exit(app.exec())
